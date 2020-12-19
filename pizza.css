@@ -5,6 +5,7 @@ html {
 
 :root {
     --fade-transition: 0.3s linear;
+    --pizza-size: 2rem;
 }
 
 h1 {
@@ -57,29 +58,29 @@ ul, ol, li {
     /* you can put a picture in 'content' but you can't size it or animate it, you have to use a background image and inline-block instead: https://stackoverflow.com/questions/8977957/can-i-change-the-height-of-an-image-in-css-before-after-pseudo-elements */
     content: "";
     background-image: url(icons/favicon.ico);
-    background-size: 20px 20px;
-    width: 20px;
-    height: 20px;
+    background-size: var(--pizza-size) var(--pizza-size);
+    width: var(--pizza-size);
+    height: var(--pizza-size);
     display: inline-block;
     opacity: 0;
     transition: var(--fade-transition);
     margin-right: 10px;
     /* make space between pizza and text */
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 
 .sidebar li.active>a::before {
     content: "";
     background-image: url(icons/favicon.ico);
-    background-size: 20px 20px;
-    width: 20px;
-    height: 20px;
+    background-size: var(--pizza-size) var(--pizza-size);
+    width: var(--pizza-size);
+    height: var(--pizza-size);
     display: inline-block;
     opacity: 1;
     transition: var(--fade-transition);
     margin-right: 10px;
     /* make space between pizza and text */
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 
 .sidebar {
