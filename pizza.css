@@ -120,6 +120,11 @@ a:hover {
     font-size: 18px;
 }
 
+.main_row p {
+    margin: 0;
+    /* the margin will be on the main_row instead */
+}
+
 section {
     padding-bottom: 3vh;
 }
@@ -131,6 +136,7 @@ section img {
 .main_row {
     display: flex;
     align-items: center;
+    padding: 2vh 0 2vh 0;
 }
 
 .img_next_to_text {
