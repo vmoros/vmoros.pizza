@@ -12,7 +12,7 @@ h1 {
     text-align: center;
     font-weight: normal;
     font-size: 4rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     font-family: "EB Garamond", serif;
 }
 
@@ -33,7 +33,7 @@ h1 {
 
 ul, ol, li {
     list-style: none;
-    margin: 0 0 0 1rem;
+    margin: 0 0 0 1vw;
     padding: 0;
 }
 
@@ -42,8 +42,8 @@ ul, ol, li {
 }
 
 .column {
-    margin: 0 0 0 3rem;
-    padding: 3rem 3rem 1rem 0rem;
+    margin: 0 0 0 3vw;
+    padding: 3rem 3vw 1rem 0rem;
     /* the left margin should be equal to the right padding for symmetry around the sidebar's border */
 }
 
@@ -97,6 +97,7 @@ a {
     text-decoration-color: transparent;
     color: blueviolet;
     transition: var(--fade-transition);
+    white-space: nowrap;
 }
 
 a:hover {
@@ -112,9 +113,27 @@ a:hover {
 
 .main {
     flex: 1;
-    max-width: 50%;
+    max-width: 50vw;
 }
 
 .main p {
     font-size: 18px;
+}
+
+section {
+    padding-bottom: 3vh;
+}
+
+section img {
+    width: 5vw;
+}
+
+.main_row {
+    display: flex;
+    align-items: center;
+}
+
+.img_next_to_text {
+    width: 4vw;
+    margin-right: 1rem;
 }
