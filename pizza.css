@@ -16,71 +16,10 @@ h1 {
     font-family: "EB Garamond", serif;
 }
 
-.external_links {
-    text-align: center;
-}
-
-.external_links a, .external_links img {
-    text-decoration: none;
-    width: 2.5rem;
-    transition: var(--fade-transition);
-}
-
-.external_links img:hover {
-    filter: invert(1);
-    transition: var(--fade-transition);
-}
-
-ul, ol, li {
-    list-style: none;
-    margin: 0 0 0 1vw;
-    padding: 0;
-}
-
-.nav_and_main {
-    display: flex;
-}
-
 .column {
     margin: 0 0 0 3vw;
     padding: 3rem 3vw 1rem 0rem;
     /* the left margin should be equal to the right padding for symmetry around the sidebar's border */
-}
-
-.sidebar li.active>a {
-    color: black;
-    /* text-shadow: -0.03ex 0 black, 0.03ex 0 black; */
-    /* making the text bold made the sidebar grow in a jerky way when the longest section became bold, so this shadow makes the text pseudo-bold without growing it, and it also animates better than bolding */
-    transition: var(--fade-transition);
-}
-
-.sidebar li>a::before {
-    /* you can put a picture in 'content' but you can't size it or animate it, you have to use a background image and inline-block instead: https://stackoverflow.com/questions/8977957/can-i-change-the-height-of-an-image-in-css-before-after-pseudo-elements */
-    content: "";
-    background-image: url(icons/favicon.ico);
-    background-size: var(--pizza-size) var(--pizza-size);
-    width: var(--pizza-size);
-    height: var(--pizza-size);
-    display: inline-block;
-    opacity: 0;
-    transition: var(--fade-transition);
-    margin-right: 10px;
-    /* make space between pizza and text */
-    vertical-align: middle;
-}
-
-.sidebar li.active>a::before {
-    content: "";
-    background-image: url(icons/favicon.ico);
-    background-size: var(--pizza-size) var(--pizza-size);
-    width: var(--pizza-size);
-    height: var(--pizza-size);
-    display: inline-block;
-    opacity: 1;
-    transition: var(--fade-transition);
-    margin-right: 10px;
-    /* make space between pizza and text */
-    vertical-align: middle;
 }
 
 .sidebar {
@@ -88,7 +27,28 @@ ul, ol, li {
     border-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(172, 172, 172) 50%, rgba(0, 0, 0, 0) 100%) 1;
     height: min-content;
     position: sticky;
-    top: 4rem;
+    top: 0;
+    list-style: none;
+    margin-left: 5vw;
+}
+
+.external_links {
+    text-align: center;
+}
+
+.sidebar a, .sidebar img {
+    text-decoration: none;
+    width: 2.5rem;
+    transition: var(--fade-transition);
+}
+
+.sidebar img:hover {
+    filter: invert(1);
+    transition: var(--fade-transition);
+}
+
+.nav_and_main {
+    display: flex;
 }
 
 a {
@@ -117,6 +77,7 @@ a:hover {
 
 .main p {
     font-size: 18px;
+    margin-bottom: 0;
 }
 
 .main_row p {
@@ -125,7 +86,11 @@ a:hover {
 }
 
 section {
-    padding-bottom: 3vh;
+    padding-bottom: 1.245rem;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(172, 172, 172) 50%, rgba(0, 0, 0, 0) 100%);
+    /* border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 50%, black 100%); */
+    border-image-slice: 1;
 }
 
 section img {
